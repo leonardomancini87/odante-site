@@ -18,7 +18,7 @@ const toc = headings.filter(
   !mobile && toc.length > 0 && (
     <nav class="toc-container">
       <div class="toc-inner">
-        <h2 class="toc-title">Table of Contents</h2>
+        <h2 class="toc-title">Indice</h2>
         <ul class="toc-list">
           {toc.map((heading) => (
             <li class={`toc-item depth-${heading.depth}`}>
@@ -36,7 +36,7 @@ const toc = headings.filter(
   mobile && toc.length > 0 && (
     <details class="toc-mobile-details" {...(open ? { open: true } : {})}>
       <summary class="toc-mobile-summary">
-        Table of Contents
+        Indice
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="icon icon-tabler icon-tabler-chevron-down"

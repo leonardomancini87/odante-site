@@ -22,24 +22,29 @@ const cvHref = CV_URL ? url(CV_URL) : null;
                 {SITE_DESCRIPTION}
             </p>
             <div class="copyright">
-                &copy; {today.getFullYear()} {SITE_TITLE}.<br/>All rights reserved.
-            </div>
+	Ultimo aggiornamento del sito web:<br />
+	{today.toLocaleDateString('it-IT', {
+		day: '2-digit',
+		month: 'long',
+		year: 'numeric',
+	})}
+</div>
         </div>
 
         <div class="footer-col">
-            <h4>Quick Links</h4>
+            <h4>Collegamenti</h4>
             <ul>
                 <li><a href={url('/')}>Home</a></li>
-                <li><a href={url('/publications')}>Publications</a></li>
-                <li><a href={url('/projects')}>Projects</a></li>
-                <li><a href={url('/team')}>Team</a></li>
-                <li><a href={url('/blog')}>News</a></li>
+                <li><a href={url('/publications')}>Pubblicazioni</a></li>
+                <li><a href={url('/projects')}>Osservatorio</a></li>
+                <li><a href={url('/team')}>Gruppo di ricerca</a></li>
+                <li><a href={url('/blog')}>Iniziative</a></li>
                 {cvHref && <li><a href={cvHref} target="_blank">Download CV</a></li>}
             </ul>
         </div>
 
         <div class="footer-col">
-            <h4>Contact</h4>
+            <h4>Contatti</h4>
             <address>
                 {CONTACT.organization}<br/>
                 {CONTACT.addressLines.map((line) => (
@@ -186,7 +191,7 @@ const cvHref = CV_URL ? url(CV_URL) : null;
                 if (modalName) modalName.textContent = member.name;
                 if (modalTitle) modalTitle.textContent = member.title || '';
                 if (modalRole) modalRole.textContent = member.role || '';
-                if (modalBio) modalBio.textContent = member.bio || 'No description available.';
+                if (modalBio) modalBio.innerHTML = member.bio || 'No description available.';
 
                 if (modalAvatar) {
                     const fallbackAvatar = generateFallbackAvatar(member.name);

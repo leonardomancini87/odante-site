@@ -1,18 +1,17 @@
 // Place any global data in this file.
-// You can import this data from anywhere in your site by using the `import` keyword.
 
-export const SITE_TITLE = 'Friedrich Nietzsche';
-export const SITE_DESCRIPTION = 'The academic portfolio of Friedrich Nietzsche.';
+export const SITE_TITLE = 'ODANTE';
+export const SITE_DESCRIPTION = 'Progetto di ricerca Dante nella contemporaneità. Le riscritture teatrali';
 
-export const CV_URL = 'https://shravangoswami.com/resume.pdf';
+export const CV_URL = '';
 
 export const CONTACT = {
-  organization: 'Shravan Goswami',
+  organization: 'ODANTE Research Project',
   addressLines: [
-    'Creator of Astro Scholar',
+    'University of Turin',
   ],
   emails: [
-    'contact@shravangoswami.com',
+    'leonardo.mancini@unito.it',
   ],
 };
 
@@ -24,30 +23,15 @@ export const SOCIAL_LINKS: ReadonlyArray<{
   icon: SocialIcon;
 }> = [
   {
-    label: 'GitHub',
-    href: 'https://github.com/shravanngoswamii/astro-scholar',
-    icon: 'github',
-  },
-  {
     label: 'Email',
-    href: 'mailto:contact@shravangoswami.com',
+    href: 'mailto:info@odante.unito.it',
     icon: 'email',
-  },
-  {
-    label: 'LinkedIn',
-    href: 'https://www.linkedin.com/in/shravangoswami/',
-    icon: 'linkedin',
-  },
-  {
-    label: 'X',
-    href: 'https://x.com/shravangoswamii',
-    icon: 'twitter',
   },
 ];
 
 export const FOOTER_CREDIT = {
-  designerName: 'Shravan Goswami',
-  designerUrl: 'https://shravangoswami.com',
-  sourceLabel: 'Open Source',
+  designerName: 'Astro Scholar',
+  designerUrl: 'https://github.com/shravanngoswamii/astro-scholar',
+  sourceLabel: 'Source',
   sourceUrl: 'https://github.com/shravanngoswamii/astro-scholar',
 };

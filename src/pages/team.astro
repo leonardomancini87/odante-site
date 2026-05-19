@@ -160,11 +160,11 @@ const withFallback = (member: AuthorRecord) => ({
 		<Header />
 		<main>
 			<div class="team-hero">
-				<h1>Research Team</h1>
-				<p>Meet the scholars, students, and collaborators shaping the ideas behind this portfolio.</p>
+				<h1>Gruppo di ricerca</h1>
+				<p>Unità di ricerca e membri del PRIN 2022 "Dante nella contemporaneità. Le riscritture teatrali" (2023-2025)</p>
 			</div>
 
-			{piMembers.map((member) => {
+			{/*{piMembers.map((member) => {
 				const profile = withFallback(member);
 				return (
 					<div class="pi-card author-modal-trigger" data-member={JSON.stringify(member)}>
@@ -172,13 +172,13 @@ const withFallback = (member: AuthorRecord) => ({
 						<div class="pi-info">
 							<h3>{profile.name}</h3>
 							<span class="pi-title">{profile.title}</span>
-							<p>{profile.bio}</p>
+							<p set:html={profile.bio}></p>
 						</div>
 					</div>
 				);
-			})}
+			})}*/}
 			
-			<h2>Current Members</h2>
+			<h2>Università degli Studi di Torino</h2>
 			<div class="grid-3">
 				{currentMembers.length > 0 ? currentMembers.map((member) => {
 					const profile = withFallback(member);
@@ -194,7 +194,7 @@ const withFallback = (member: AuthorRecord) => ({
 							/>
 							<span class="team-name">{profile.name}</span>
 							<span class="team-role">{profile.title}</span>
-							<span style="font-size: 0.85rem; color: var(--color-text-muted); display: block; margin-top: 4px;">{profile.role}</span>
+							<span style="font-size: 0.85rem; color: var(--color-text-muted); display: block; margin-top: 4px;" set:html={profile.role}></span>
 						</div>
 					);
 				}) : <p>No current members found.</p>}
@@ -228,7 +228,7 @@ const withFallback = (member: AuthorRecord) => ({
 
 			{alumni.length > 0 && (
 				<>
-					<h2>Alumni</h2>
+					<h2>Università degli Studi di Salerno</h2>
 					<div class="grid-3">
 						{alumni.map((member) => {
 							const profile = withFallback(member);

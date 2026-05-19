@@ -69,7 +69,7 @@ Update these files first:
 
 Layout and components:
 
-- `src/layouts/BlogPost.astro`: post layout
+- `src/layouts/blogPost.astro`: post layout
 - `src/components/Header.astro`: top navigation
 - `src/components/Footer.astro`: footer
 

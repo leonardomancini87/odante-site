@@ -1,0 +1,34 @@
+---
+import { type CollectionEntry, getCollection, render } from 'astro:content';
+import BlogPost from '../../layouts/blogPost.astro';
+
+export async function getStaticPaths() {
+	const performances = await getCollection(
+		'performances',
+		({ data }) => !data.draft
+	);
+
+	return performances.map((performance) => ({
+		params: { slug: performance.id },
+		props: performance,
+	}));
+}
+
+type Props = CollectionEntry<'performances'>;
+
+const performance = Astro.props;
+const { Content, headings } = await render(performance);
+
+const tags = performance.data.tags ?? performance.data.categories ?? [];
+
+const postData = {
+	...performance.data,
+	tags,
+	authors: performance.data.company ? [performance.data.company] : ['ODANTE'],
+	heroImage: performance.data.heroImage ?? performance.data.featuredImage ?? performance.data.image,
+};
+---
+
+<BlogPost {...postData} id={performance.id} headings={headings}>
+	<Content />
+</BlogPost>
