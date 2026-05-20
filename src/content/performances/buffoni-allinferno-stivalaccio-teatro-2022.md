@@ -1,6 +1,6 @@
 ---
 title: Buffoni all'Inferno
-description: Profondità delle lande desolate dell’inferno. Un tranquillo ed eterno giorno di torture strazianti. D’un tratto si leva un latrare sguaiato, sono i diavoli di malebranche che corrono da una parte all’altra alla ricerca del loro Re,np il terribile Satana. Sulle rive dello Stige sono giunte millemila anime, così, d’un tratto, portate all’altro mondo da una fulminante peste bubbonica, vaiolica, assassina e vigliacca. 
+description: Profondità delle lande desolate dell’inferno. Un tranquillo ed eterno giorno di torture strazianti. D’un tratto si leva un latrare sguaiato, sono i diavoli di malebranche che corrono da una parte all’altra alla ricerca del loro Re, il terribile Satana. Sulle rive dello Stige sono giunte millemila anime, così, d’un tratto, portate all’altro mondo da una fulminante peste bubbonica, vaiolica, assassina e vigliacca. 
 year: 2022
 company: Stivalaccio Teatro
 premiere: 30 ottobre 2022, Teatro Olimpico di Vicenza

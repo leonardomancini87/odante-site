@@ -1,8 +1,7 @@
 ---
 title: Dante fra le fiamme e le stelle
-description: La drammaturgia ideata dall'attore Matthias Martelli si focalizza sulla
-  vita del poeta Dante Alighieri, mettendo in scena, tra lazzi e intermezzi comici
-  ripresi dalla Commedia dell'Arte, le tappe che hanno portato l'Alighieri alla scrittura...
+description: >- 
+  «Io sono solo un giullare, mi sono lasciato percorrere dalla sua vita e dalle sue opere per cercare di disegnare un Dante umano, troppo umano. Perché ogni volta che una figura viene divinizzata, il fascino rischia di svanire e vengono soppresse contraddizioni e incoerenze, ovvero le caratteristiche che rendono il genio davvero affascinante [...]».
 year: 2022
 company: Matthias Martelli
 director: Emiliano Bronzino
