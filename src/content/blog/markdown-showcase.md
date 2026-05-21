@@ -93,7 +93,7 @@ These callouts use lightweight HTML inside markdown, which works nicely when you
 
 The image below uses standard markdown image syntax with a local asset from the repo:
 
-![Academic portfolio placeholder image](../../../assets/blog-placeholder-about.jpg)
+<!-- ![Academic portfolio placeholder image](../../assets/blog-placeholder-about.jpg) -->
 
 ---
 

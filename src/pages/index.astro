@@ -5,94 +5,21 @@ import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import { Image } from 'astro:assets';
 import { getCollection } from 'astro:content';
-import bibFileRaw from '../data/publications.bib?raw';
 import { url } from '../utils/paths';
 
 import profileImage from '../assets/inferno-castellucci-photo-de-lage.jpeg';
 
-const posts = (await getCollection('blog')).sort(
-	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
-).slice(0, 3);
-
-interface Author {
-	first: string;
-	last: string;
-}
-
-interface BibEntry {
-	type: string;
-	key: string;
-	fields: Record<string, string>;
-	authors: Author[];
-}
-
-function parseBibTeX(input: string): BibEntry[] {
-	const entries: BibEntry[] = [];
-	const rawEntries = input.split(/@(\w+)\s*\{/g).slice(1);
-
-	for (let i = 0; i < rawEntries.length; i += 2) {
-		const type = rawEntries[i].trim();
-		const body = rawEntries[i + 1];
-		if (!body) continue;
-
-		const keyMatch = body.match(/^\s*([^,]+),/);
-		const key = keyMatch ? keyMatch[1].trim() : 'unknown';
-
-		const fields: Record<string, string> = {
-			title: 'Untitled',
-			year: '0000',
-		};
-
-		const fieldRegex =
-			/(\w+)\s*=\s*(?:\{((?:[^{}]|{[^{}]*})*)\}|"((?:[^"]|\\")*)"|(\d+))/g;
-
-		let match;
-
-		while ((match = fieldRegex.exec(body)) !== null) {
-			const fieldKey = match[1].toLowerCase();
-			const val = match[2] || match[3] || match[4] || '';
-			fields[fieldKey] = val.replace(/\s+/g, ' ').trim();
-		}
-
-		let authors: Author[] = [];
-
-		if (fields.author) {
-			authors = fields.author.split(/\s+and\s+/i).map((str) => {
-				const parts = str.split(',');
-
-				if (parts.length > 1) {
-					return {
-						first: parts[1].trim(),
-						last: parts[0].trim(),
-					};
-				}
-
-				const names = str.trim().split(' ');
-				const last = names.pop() || '';
-				const first = names.join(' ');
-
-				return { first, last };
-			});
-		}
-
-		entries.push({ type, key, fields, authors });
-	}
-
-	return entries;
-}
-
-const publications = parseBibTeX(bibFileRaw)
-	.sort((a, b) => {
-		return (
-			(parseInt(b.fields.year) || 0) -
-			(parseInt(a.fields.year) || 0)
-		);
-	})
+const posts = (await getCollection('blog'))
+	.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
 	.slice(0, 3);
 
-const formatAuthor = (auth: Author) => {
-	return auth.first ? `${auth.first} ${auth.last}` : auth.last;
-};
+const performances = (await getCollection('performances'))
+	.sort((a, b) => {
+		const yearA = Number(a.data.year) || 0;
+		const yearB = Number(b.data.year) || 0;
+		return yearB - yearA;
+	})
+	.slice(0, 3);
 ---
 
 <!doctype html>
@@ -148,6 +75,11 @@ const formatAuthor = (auth: Author) => {
 				margin-bottom: 0.25rem;
 				font-family: var(--font-serif);
 				font-size: 1.1rem;
+				text-decoration: none;
+			}
+
+			.pub-title:hover {
+				color: var(--color-accent);
 			}
 
 			.pub-meta {
@@ -231,14 +163,7 @@ const formatAuthor = (auth: Author) => {
 						</a>
 
 						<a
-							href={url('/publications')}
-							class="btn btn-outline"
-						>
-							Pubblicazioni
-						</a>
-
-						<a
-							href={url('/blog')}
+							href={url('/iniziative')}
 							class="btn btn-outline"
 						>
 							Eventi
@@ -273,56 +198,35 @@ const formatAuthor = (auth: Author) => {
 
 					<div class="publication-list">
 						{
-							publications.length > 0 ? (
-								publications.map((pub) => (
+							performances.length > 0 ? (
+								performances.map((performance) => (
 									<div class="pub-mini-item">
-										<span class="pub-title">
-											{pub.fields.title.replace(
-												/[{}]/g,
-												''
-											)}
-										</span>
+	<a
+		href={url(`/osservatorio/${performance.id}/`)}
+		class="pub-title"
+	>
+		{performance.data.title}
+	</a>
 
-										<div class="pub-meta">
-											{pub.authors
-												.map((a) =>
-													formatAuthor(a)
-												)
-												.join(', ')}
-
-											<br />
-
-											<span
-												style="
-													font-style: italic;
-													color: var(--color-accent);
-												"
-											>
-												{(
-													pub.fields.journal ||
-													pub.fields.booktitle ||
-													pub.fields.publisher ||
-													'Preprint'
-												).replace(/[{}]/g, '')}
-											</span>
-
-											{pub.fields.year && (
-												<span>
-													, {pub.fields.year}
-												</span>
-											)}
-										</div>
-									</div>
+	<div class="pub-meta">
+		{[
+			performance.data.company || performance.data.author,
+			performance.data.year,
+		]
+			.filter(Boolean)
+			.join(', ')}
+	</div>
+</div>
 								))
 							) : (
-								<p>No publications found.</p>
+								<p>Nessuno spettacolo censito.</p>
 							)
 						}
 					</div>
 
 					<div style="margin-top: 1.5rem;">
 						<a
-							href={url('/publications')}
+							href={url('/osservatorio')}
 							style="font-weight: 600;"
 						>
 							Consulta l'archivio &rarr;
@@ -367,7 +271,7 @@ const formatAuthor = (auth: Author) => {
 										"
 									>
 										{post.data.pubDate.toLocaleDateString(
-											'en-us',
+											'it-IT',
 											{
 												year: 'numeric',
 												month: 'short',

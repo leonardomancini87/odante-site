@@ -13,7 +13,7 @@ const cvHref = CV_URL ? url(CV_URL) : null;
 		<div class="internal-links">
 			<HeaderLink href={url('/')}>Home</HeaderLink>
 			<HeaderLink href={url('/team')}>Gruppo di ricerca</HeaderLink>
-			<HeaderLink href={url('/publications')}>Pubblicazioni</HeaderLink>
+				{/* <HeaderLink href={url('/publications')}>Pubblicazioni</HeaderLink> */}
 			<HeaderLink href={url('/osservatorio')}>Osservatorio</HeaderLink>
 			<HeaderLink href={url('/iniziative')}>Iniziative</HeaderLink>
 			{cvHref && <HeaderLink href={cvHref} target="_blank">CV</HeaderLink>}
@@ -43,7 +43,7 @@ const cvHref = CV_URL ? url(CV_URL) : null;
         </div>
         <a href={url('/')}>Home</a>
         <a href={url('/team')}>Gruppo di ricerca</a>
-        <a href={url('/publications')}>Pubblicazioni</a>
+        	{/* <a href={url('/publications')}>Pubblicazioni</a> */}
         <a href={url('/osservatorio')}>Osservatorio</a>
         <a href={url('/iniziative')}>Iniziative</a>
         {cvHref && <a href={cvHref} target="_blank">CV</a>}

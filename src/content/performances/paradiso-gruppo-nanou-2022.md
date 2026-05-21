@@ -10,8 +10,6 @@ tags:
 - danza contemporanea
 - gruppo nanou
 - Paradiso
-wordpressId: 1125
-wordpressStatus: publish
 criticalNoteAuthor: "Sara Fontana"
 criticalNoteDate: "2025-08-18"
 criticalNote: |
