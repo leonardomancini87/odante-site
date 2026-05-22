@@ -73,6 +73,38 @@
     "alumni": false
   },
   {
+    "id": "erminio-risso",
+    "name": "Erminio Risso",
+    "title": "Letteratura italiana contemporanea",
+    "role": "Assegnista di ricerca",
+    "bio": "Erminio Risso (1967), insegnante in un liceo genovese e consulente editoriale, attualmente è assegnista di ricerca per l’Università degli Studi di Torino. Condirige la collana “Costellazione Sanguineti: i materiali verbali” per le Edizioni dell’Orso. Si occupa di letteratura dall’Ottocento agli anni duemila. Per Feltrinelli ha curato diverse opere di Sanguineti e scritto le prefazioni alle nuove edizioni di Segnalibro (2021), Il gatto lupesco (2021), Capriccio italiano (2021), Il Giuoco dell’Oca (2023) e L’orologio astronomico (2024). Ha scritto inoltre la prefazione a Vogliamo tutto di Nanni Balestrini (2025)",
+    "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Plato_Pio-Clementino.jpg/440px-Plato_Pio-Clementino.jpg",
+    "email": "erminio.risso@unito.it",
+    "website": "https://www.humanities.unito.it/do/docenti.pl/Alias?erminio.risso",
+    "sortOrder": 7,
+    "alumni": false
+  },
+  {
+    "id": "sara-fontana",
+    "name": "Sara Fontana",
+    "title": "Discipline dello spettacolo",
+    "role": "Assegnista di ricerca",
+    "bio": "René is a French philosopher, mathematician, and scientist whose work on skepticism, the mind-body problem, and rationalism fundamentally shaped modern philosophy.",
+    "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Frans_Hals_-_Portret_van_René_Descartes.jpg/440px-Frans_Hals_-_Portret_van_René_Descartes.jpg",
+    "sortOrder": 8,
+    "alumni": false
+  },
+  {
+    "id": "vito-lentini",
+    "name": "Vito Lentini",
+    "title": "Discipline dello spettacolo",
+    "role": "Founding Member (Alumni)",
+    "bio": "John is an English philosopher whose empiricist approach to epistemology and his theory of natural rights profoundly influenced the development of liberalism and democratic thought.",
+    "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/John_Locke.jpg/440px-John_Locke.jpg",
+    "sortOrder": 9,
+    "alumni": false
+  },
+  {
     "id": "plato",
     "name": "Rosa Giulio",
     "title": "Founder",
@@ -81,7 +113,7 @@
     "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Plato_Pio-Clementino.jpg/440px-Plato_Pio-Clementino.jpg",
     "email": "rgiulio@unisa.it",
     "website": "https://docenti.unisa.it/005282/home",
-    "sortOrder": 8,
+    "sortOrder": 10,
     "alumni": true
   },
   {
@@ -91,7 +123,7 @@
     "role": "Founder (Alumni)",
     "bio": "René is a French philosopher, mathematician, and scientist whose work on skepticism, the mind-body problem, and rationalism fundamentally shaped modern philosophy.",
     "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Frans_Hals_-_Portret_van_René_Descartes.jpg/440px-Frans_Hals_-_Portret_van_René_Descartes.jpg",
-    "sortOrder": 9,
+    "sortOrder": 11,
     "alumni": true
   },
   {
@@ -101,7 +133,18 @@
     "role": "Founding Member (Alumni)",
     "bio": "John is an English philosopher whose empiricist approach to epistemology and his theory of natural rights profoundly influenced the development of liberalism and democratic thought.",
     "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/John_Locke.jpg/440px-John_Locke.jpg",
-    "sortOrder": 10,
+    "sortOrder": 12,
     "alumni": true
+  },
+  {
+    "id": "eleonisia-mandola",
+    "name": "Eleonisia Mandola",
+    "title": "Letteratura italiana contemporanea",
+    "role": "Assegnista di ricerca",
+    "bio": "Eleonisia Mandola si è laureata in Lettere Moderne, con una tesi triennale in Filologia romanza dal titolo La influenza della khargia sulla tradizione gallego-portoghese, tutor la Prof.ssa C. Lee, con votazione di 110/110 e lode, presso l’Università degli Studi di Salerno. Nel 2015 ha collaborato al DOC (Dizionario online dell’occitano medievale), tutor la Prof.ssa S. Galano, presso DIPSUM. Nello stesso anno si è laureata in Filologia Moderna, con una tesi magistrale, in Filologia e critica dantesca, dal titolo Preliminari per lo studio della tradizione del Paradiso, tutor il Prof. F. Sanguineti, con una votazione di 110/110 e lode, presso l’Università degli Studi di Salerno. Dal lavoro di tesi magistrale è poi scaturito un ampio articolo, Per la ‘collatio’ del ‘Paradiso’, «Studi danteschi», vol. LXXXI (2016), pp. 289-331. Nel 2018, vincitrice del concorso “Help teaching”, ha ottenuto la nomina come cultore della materia in Filologia italiana e in Filologia e critica dantesca. Nel 2019, ha partecipato, in qualità di discussant, al Workshop 12 L’edizione critica della Commedia, Società Dantesca Italiana, Firenze, 28 marzo 2019. Tra le sue ultime pubblicazioni, l’edizione critica, Dante, Paradiso I-XVII. Edizione critica alla luce del più antico codice di sicura fiorentinità, Genova, Il Melangolo, 2018, pp. 7-268 e Dante, Paradiso XVIII-XXXIII. Edizione critica alla luce del più antico codice di sicura fiorentinità, Genova, il Melangolo, 2019, pp. 7-228; Premessa a Dante. Inferno. Edizione critica alla luce del più antico codice di sicura fiorentinità. Laurenziano Pluteo 40 12, a cura di F. Sanguineti, Genova, il Melangolo, 2020, pp. 9-14. Attualmente sono in corso di stampa il saggio L’edizione Petrocchi «alla luce del più antico codice di sicura fiorentinità», in Workshop 12 L’edizione critica della Commedia, Società Dantesca Italiana, 28 marzo 2019, Firenze, SISMEL e Il cinema nelle lettere di Sanguineti a Sanguineti, «Sinestesie», uno studio nato grazie alla collaborazione (dal 2019) con il Centro Interuniversitario Edoardo Sanguineti, diretto dalla Prof.ssa Clara Allasia, per l’edizione delle lettere di Edoardo Sanguineti al figlio primogenito.",
+    "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/John_Locke.jpg/440px-John_Locke.jpg",
+    "sortOrder": 12,
+    "alumni": true,
+    "website": "https://www.dipsumdills.it/fr/teacher/eleonisia-mandola"
   }
 ]

@@ -9,7 +9,7 @@ import TableOfContents from '../components/TableOfContents.astro';
 import { url } from '../utils/paths';
 import { marked } from 'marked';
 
-type Props = CollectionEntry<'blog'>['data'] & {
+type Props = CollectionEntry<'iniziative'>['data'] & {
 	id?: string;
 	headings?: { depth: number; slug: string; text: string }[];
 	toc?: boolean;

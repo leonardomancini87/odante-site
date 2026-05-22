@@ -9,11 +9,11 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
 import { url } from '../../utils/paths';
 
 export async function getStaticPaths() {
-	const posts = (await getCollection('blog')).sort(
+	const posts = (await getCollection('iniziative')).sort(
 		(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 	);
 
-	const pageSize = 4;
+	const pageSize = 10;
 	const totalPages = Math.ceil(posts.length / pageSize);
 	const paths = [];
 
@@ -313,19 +313,19 @@ const { posts, currentPage, totalPages, nextPage, prevPage } = Astro.props;
 									: `/iniziative/${prevPage}`
 							)}
 						>
-							&larr; Previous
+							&larr; Precedente
 						</a>
 					) : (
 						<span class="disabled">&larr; Previous</span>
 					)}
 
 					<span class="page-count">
-						Page {currentPage} of {totalPages}
+						Pagina {currentPage} di {totalPages}
 					</span>
 
 					{nextPage ? (
 						<a href={url(`/iniziative/${nextPage}`)}>
-							Next &rarr;
+							Successiva &rarr;
 						</a>
 					) : (
 						<span class="disabled">Next &rarr;</span>
